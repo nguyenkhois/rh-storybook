@@ -1,0 +1,28 @@
+{
+  "name": "rh-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/addons": "^5.3.6",
+    "@storybook/html": "^5.3.6",
+    "@storybook/react": "^5.3.6",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "handlebars": "^4.7.2",
+    "handlebars-loader": "^1.7.1",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.2"
+  }
+}

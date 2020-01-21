@@ -1,0 +1,9 @@
+{
+    "title": "Atoms/Label",
+    "status": "prototype",
+    "version": "1.0.0",
+    "description": "Atom - Label component",
+    "context": {
+        "text": "Context here"
+    }
+}
