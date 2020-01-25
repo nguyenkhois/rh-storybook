@@ -19,3 +19,21 @@ steps:
     npm install
     npm run build-storybook
   displayName: 'npm install and build-storybook'
+
+- task: ArchiveFiles@2
+  displayName: Zip site
+  inputs:
+    rootFolderOrFile: '$(Agent.BuildDirectory)/storybook-static' 
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
+    replaceExistingArchive: true
+
+- script:  >-
+      curl
+      -H 'Authorization: Bearer $(netlifyAccessToken)' 
+      -H 'Content-Type: application/zip'
+      --data-binary '@$(Build.BuildId).zip'
+      https://api.netlify.com/api/v1/sites/$(netlifySiteId)/deploys
+  workingDirectory: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Upload to Netlify'
