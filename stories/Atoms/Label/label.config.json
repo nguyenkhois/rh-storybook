@@ -4,6 +4,6 @@
     "version": "1.0.0",
     "description": "Atom - Label component",
     "context": {
-        "text": "Context here"
+        "text": "We come from Azure pipelines and Netlify!"
     }
 }
